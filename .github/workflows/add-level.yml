@@ -33,7 +33,9 @@ jobs:
       - name: Start Webserver
         run: |
           npm run start &
-          npx wait-on http://localhost:3001
+          echo "Waiting for server..."
+          timeout 60s bash -c 'until curl -s http://localhost:3001 > /dev/null; do sleep 1; done'
+          echo "Server is up!"
 
       - name: Run Add Level Script
         run: npx tsx scripts/addLevel.ts --level ${{ inputs.level }}
