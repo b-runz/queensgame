@@ -1,0 +1,45 @@
+name: Add Level
+
+on:
+  workflow_dispatch:
+    inputs:
+      level:
+        description: 'Level number to add'
+        required: true
+        type: number
+
+permissions:
+  contents: write
+
+jobs:
+  add-level:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Install Playwright Browsers
+        run: npx playwright install --with-deps chromium
+
+      - name: Start Webserver
+        run: |
+          npm run start &
+          npx wait-on http://localhost:3001
+
+      - name: Run Add Level Script
+        run: npx tsx scripts/addLevel.ts --level ${{ inputs.level }}
+
+      - name: Commit changes
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "feat: add level ${{ inputs.level }}"
+          file_pattern: 'src/utils/levels/*.ts src/utils/levels.ts README.md'
