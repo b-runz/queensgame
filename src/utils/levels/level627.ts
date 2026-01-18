@@ -10,8 +10,8 @@ import {
   saharaSand,
 } from "../colors";
 
-const level626 = {
-  size: 8,
+const level627 = {
+  size: 9,
   colorRegions: [
     ["A", "A", "A", "B", "B", "A", "A", "A", "A"],
     ["A", "A", "B", "B", "A", "A", "C", "C", "A"],
@@ -21,6 +21,7 @@ const level626 = {
     ["A", "A", "G", "G", "H", "E", "F", "F", "A"],
     ["A", "G", "G", "H", "H", "A", "F", "A", "A"],
     ["A", "I", "I", "H", "A", "A", "A", "A", "A"],
+    ["I", "I", "A", "A", "A", "A", "A", "A", "A"],
   ],
   regionColors: {
     A: lightOrchid,
@@ -33,6 +34,7 @@ const level626 = {
     H: chardonnay,
     I: lightWisteria,
   },
+  isNew: true,
 };
 
-export default level626;
+export default level627;
