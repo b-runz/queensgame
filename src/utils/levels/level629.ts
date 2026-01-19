@@ -1,34 +1,27 @@
 import {
-  altoMain,
-  anakiwa,
-  bittersweet,
-  celadon,
-  chardonnay,
-  lightWisteria,
-  saharaSand,
+  altoMain,anakiwa,bittersweet,celadon,chardonnay,lightWisteria,saharaSand,
 } from "../colors";
 
 const level629 = {
   size: 7,
   colorRegions: [
-    ["A", "A", "A", "A", "A", "B", "B"],
-    ["A", "C", "A", "D", "A", "B", "B"],
-    ["A", "D", "D", "D", "A", "B", "B"],
+    ["A", "A", "A", "A", "A", "G", "G"],
+    ["A", "E", "A", "F", "A", "G", "G"],
+    ["A", "F", "F", "F", "A", "G", "G"],
+    ["F", "F", "G", "G", "G", "G", "G"],
+    ["F", "F", "B", "B", "B", "B", "B"],
+    ["D", "D", "B", "C", "C", "C", "B"],
     ["D", "D", "B", "B", "B", "B", "B"],
-    ["D", "D", "E", "E", "E", "E", "E"],
-    ["F", "F", "E", "G", "G", "G", "E"],
-    ["F", "F", "E", "E", "E", "E", "E"],
   ],
   regionColors: {
-    A: lightWisteria,
-    B: saharaSand,
-    C: altoMain,
-    D: bittersweet,
+    A: altoMain,
+    B: anakiwa,
+    C: bittersweet,
+    D: celadon,
     E: chardonnay,
-    F: celadon,
-    G: anakiwa,
+    F: lightWisteria,
+    G: saharaSand,
   },
-  isNew: true,
 };
 
 export default level629;

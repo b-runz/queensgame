@@ -1,12 +1,5 @@
 import {
-  altoMain,
-  anakiwa,
-  bittersweet,
-  celadon,
-  chardonnay,
-  lightWisteria,
-  nomad,
-  saharaSand,
+  altoMain,anakiwa,bittersweet,celadon,chardonnay,lightWisteria,nomad,saharaSand,
 } from "../colors";
 
 const level628 = {
@@ -22,12 +15,12 @@ const level628 = {
     ["H", "H", "D", "D", "G", "G", "F", "F"],
   ],
   regionColors: {
-    A: lightWisteria,
-    B: chardonnay,
-    C: anakiwa,
+    A: altoMain,
+    B: anakiwa,
+    C: bittersweet,
     D: celadon,
-    E: altoMain,
-    F: bittersweet,
+    E: chardonnay,
+    F: lightWisteria,
     G: saharaSand,
     H: nomad,
   },

@@ -1,38 +1,30 @@
 import {
-  altoMain,
-  anakiwa,
-  bittersweet,
-  celadon,
-  chardonnay,
-  lightOrchid,
-  lightWisteria,
-  nomad,
-  saharaSand,
+  altoMain,anakiwa,bittersweet,celadon,chardonnay,lightWisteria,nomad,saharaSand,lavenderRose
 } from "../colors";
 
 const level627 = {
   size: 9,
   colorRegions: [
-    ["A", "A", "A", "B", "B", "A", "A", "A", "A"],
-    ["A", "A", "B", "B", "A", "A", "C", "C", "A"],
-    ["A", "A", "A", "A", "A", "C", "C", "A", "A"],
-    ["A", "A", "A", "A", "D", "D", "E", "A", "A"],
-    ["A", "A", "A", "D", "D", "E", "E", "F", "A"],
-    ["A", "A", "G", "G", "H", "E", "F", "F", "A"],
-    ["A", "G", "G", "H", "H", "A", "F", "A", "A"],
-    ["A", "I", "I", "H", "A", "A", "A", "A", "A"],
+    ["A", "A", "A", "G", "G", "A", "A", "A", "A"],
+    ["A", "A", "G", "G", "A", "A", "F", "F", "A"],
+    ["A", "A", "A", "A", "A", "F", "F", "A", "A"],
+    ["A", "A", "A", "A", "C", "C", "E", "A", "A"],
+    ["A", "A", "A", "C", "C", "E", "E", "H", "A"],
+    ["A", "A", "D", "D", "B", "E", "H", "H", "A"],
+    ["A", "D", "D", "B", "B", "A", "H", "A", "A"],
+    ["A", "I", "I", "B", "A", "A", "A", "A", "A"],
     ["I", "I", "A", "A", "A", "A", "A", "A", "A"],
   ],
   regionColors: {
-    A: lightOrchid,
-    B: saharaSand,
+    A: altoMain,
+    B: anakiwa,
     C: bittersweet,
-    D: anakiwa,
-    E: altoMain,
-    F: nomad,
-    G: celadon,
-    H: chardonnay,
-    I: lightWisteria,
+    D: celadon,
+    E: chardonnay,
+    F: lightWisteria,
+    G: saharaSand,
+    H: nomad,
+    I: lavenderRose
   },
 };
 
