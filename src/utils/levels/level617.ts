@@ -22,7 +22,6 @@ const level617 = {
     D: bittersweet,
     E: anakiwa,
   },
-  isNew: true,
 };
 
 export default level617;

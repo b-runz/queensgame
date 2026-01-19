@@ -26,7 +26,6 @@ const level620 = {
     E: nomad,
     F: anakiwa,
   },
-  isNew: true,
 };
 
 export default level620;

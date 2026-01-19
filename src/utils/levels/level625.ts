@@ -30,7 +30,6 @@ const level625 = {
     G: lightWisteria,
     H: altoMain,
   },
-  isNew: true,
 };
 
 export default level625;
