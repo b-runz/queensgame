@@ -1,5 +1,5 @@
 import {
-  altoMain,\n  anakiwa,\n  bittersweet,\n  celadon,\n  chardonnay,\n  lightWisteria,\n  saharaSand,
+  altoMain,  anakiwa,  bittersweet,  celadon,  chardonnay,  lightWisteria,  saharaSand,
 } from "../colors";
 
 const level630 = {
