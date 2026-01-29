@@ -32,13 +32,6 @@ jobs:
       - name: Install Playwright Browsers
         run: npx playwright install --with-deps chromium
 
-      - name: Start Webserver
-        run: |
-          npm run start &
-          echo "Waiting for server..."
-          timeout 60s bash -c 'until curl -s http://localhost:3001 > /dev/null; do sleep 1; done'
-          echo "Server is up!"
-
       - name: Find Next Level Number
         id: find-level
         run: |
@@ -50,7 +43,7 @@ jobs:
           echo "Next level to add: $NEXT_LEVEL"
 
       - name: Run Add Level Script
-        run: npx tsx scripts/addLevel.ts --level ${{ steps.find-level.outputs.next_level }}
+        run: npx tsx scripts/addLevelfromSource.ts --level ${{ steps.find-level.outputs.next_level }} --headless
 
       - name: Commit changes
         uses: stefanzweifel/git-auto-commit-action@v5
