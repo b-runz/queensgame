@@ -1,8 +1,6 @@
 name: Add Level
 
 on:
-  schedule:
-    - cron: '30 7 * * *'  # 9:30 AM CEST (7:00 AM UTC)
   workflow_dispatch:
 
 permissions:
