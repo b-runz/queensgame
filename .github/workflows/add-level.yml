@@ -18,17 +18,16 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
+      - name: Setup Bun
+        uses: oven-sh/setup-bun@v2
         with:
-          node-version: 20
-          cache: 'npm'
+          bun-version: latest
 
       - name: Install dependencies
-        run: npm ci
+        run: bun install
 
       - name: Install Playwright Browsers
-        run: npx playwright install --with-deps chromium
+        run: bunx playwright install --with-deps chromium
 
       - name: Find Next Level Number
         id: find-level
@@ -41,7 +40,7 @@ jobs:
           echo "Next level to add: $NEXT_LEVEL"
 
       - name: Run Add Level Script
-        run: npx tsx scripts/addLevelfromSource.ts --level ${{ steps.find-level.outputs.next_level }} --headless
+        run: bunx tsx scripts/addLevelfromSource.ts --level ${{ steps.find-level.outputs.next_level }} --headless
 
       - name: Commit changes
         uses: stefanzweifel/git-auto-commit-action@v5
@@ -50,7 +49,7 @@ jobs:
           file_pattern: 'src/utils/levels/*.ts src/utils/levels.ts README.md'
 
       - name: Build for production
-        run: npm run build
+        run: bun run build
 
       - name: Setup Pages
         uses: actions/configure-pages@v4
